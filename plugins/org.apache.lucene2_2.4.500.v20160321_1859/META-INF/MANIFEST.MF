@@ -1,0 +1,47 @@
+Manifest-Version: 1.0
+Bundle-ClassPath: lucene-core-3.6.1.jar,lucene-analyzers-3.6.1.jar,luc
+ ene-smartcn-3.6.1.jar,lucene-kuromoji-3.6.1.jar
+Bundle-Vendor: The Apache Software Foundation
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-Name: Apache Lucene
+Bundle-SymbolicName: org.apache.lucene2
+Export-Package: org.apache.lucene,org.apache.lucene.analysis,org.apach
+ e.lucene.analysis.ar,org.apache.lucene.analysis.bg,org.apache.lucene.
+ analysis.br,org.apache.lucene.analysis.ca,org.apache.lucene.analysis.
+ charfilter,org.apache.lucene.analysis.cjk,org.apache.lucene.analysis.
+ cn,org.apache.lucene.analysis.cn.smart,org.apache.lucene.analysis.cn.
+ smart.hhmm,org.apache.lucene.analysis.compound,org.apache.lucene.anal
+ ysis.compound.hyphenation,org.apache.lucene.analysis.cz,org.apache.lu
+ cene.analysis.da,org.apache.lucene.analysis.de,org.apache.lucene.anal
+ ysis.el,org.apache.lucene.analysis.en,org.apache.lucene.analysis.es,o
+ rg.apache.lucene.analysis.eu,org.apache.lucene.analysis.fa,org.apache
+ .lucene.analysis.fi,org.apache.lucene.analysis.fr,org.apache.lucene.a
+ nalysis.ga,org.apache.lucene.analysis.gl,org.apache.lucene.analysis.h
+ i,org.apache.lucene.analysis.hu,org.apache.lucene.analysis.hunspell,o
+ rg.apache.lucene.analysis.hy,org.apache.lucene.analysis.id,org.apache
+ .lucene.analysis.in,org.apache.lucene.analysis.it,org.apache.lucene.a
+ nalysis.ja,org.apache.lucene.analysis.ja.dict,org.apache.lucene.analy
+ sis.ja.tokenattributes,org.apache.lucene.analysis.ja.util,org.apache.
+ lucene.analysis.lv,org.apache.lucene.analysis.miscellaneous,org.apach
+ e.lucene.analysis.ngram,org.apache.lucene.analysis.nl,org.apache.luce
+ ne.analysis.no,org.apache.lucene.analysis.path,org.apache.lucene.anal
+ ysis.payloads,org.apache.lucene.analysis.position,org.apache.lucene.a
+ nalysis.pt,org.apache.lucene.analysis.query,org.apache.lucene.analysi
+ s.reverse,org.apache.lucene.analysis.ro,org.apache.lucene.analysis.ru
+ ,org.apache.lucene.analysis.shingle,org.apache.lucene.analysis.sinks,
+ org.apache.lucene.analysis.snowball,org.apache.lucene.analysis.standa
+ rd,org.apache.lucene.analysis.standard.std31,org.apache.lucene.analys
+ is.standard.std34,org.apache.lucene.analysis.sv,org.apache.lucene.ana
+ lysis.synonym,org.apache.lucene.analysis.th,org.apache.lucene.analysi
+ s.tokenattributes,org.apache.lucene.analysis.tr,org.apache.lucene.ana
+ lysis.util,org.apache.lucene.analysis.wikipedia,org.apache.lucene.col
+ lation,org.apache.lucene.document,org.apache.lucene.index,org.apache.
+ lucene.queryParser,org.apache.lucene.search,org.apache.lucene.search.
+ function,org.apache.lucene.search.payloads,org.apache.lucene.search.s
+ pans,org.apache.lucene.store,org.apache.lucene.util,org.apache.lucene
+ .util.fst,org.apache.lucene.util.packed,org.tartarus.snowball,org.tar
+ tarus.snowball.ext
+Bundle-Version: 2.4.500.v20160321_1859
+Bundle-ManifestVersion: 2
+
+

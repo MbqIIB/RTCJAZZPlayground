@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Eclipse-PlatformFilter: (& (osgi.os=zos) (osgi.arch=s390))
+Bundle-ClassPath: os/
+Fragment-Host: org.eclipse.core.filesystem;bundle-version="[1.1.0,2.0.
+ 0)"
+Bundle-Name: Core File System for z/OS s390
+Bundle-SymbolicName: org.eclipse.core.filesystem.zos.s390;singleton:=t
+ rue
+Bundle-Version: 3.0.1.v20151120_1440
+Bundle-ManifestVersion: 2
+
+

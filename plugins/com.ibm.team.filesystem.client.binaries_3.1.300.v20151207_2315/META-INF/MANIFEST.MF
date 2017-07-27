@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ClassPath: com.ibm.team.filesystem.client.1.7.jar
+Bundle-Vendor: %bundleVendor
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Fragment-Host: com.ibm.team.filesystem.client
+Bundle-Name: %bundleName
+Bundle-SymbolicName: com.ibm.team.filesystem.client.binaries;singleton
+ :=true
+Bundle-Version: 3.1.300.v20151207_2315
+Bundle-ManifestVersion: 2
+
+

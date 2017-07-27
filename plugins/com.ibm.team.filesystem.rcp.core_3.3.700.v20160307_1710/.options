@@ -1,0 +1,10 @@
+# Debugging options for this plugin.
+
+# Print out tracing info to the console related to the active workspace manager
+com.ibm.team.filesystem.rcp.core/trace.activeworkspaces=false
+# Print out tracing info to the console when the component sync model is refreshing
+com.ibm.team.filesystem.rcp.core/trace.componentsyncmodel.refresh=false
+# Print out tracing info to the console when the component sync model adds or removes component or workspaces to be monitored
+com.ibm.team.filesystem.rcp.core/trace.componentsyncmodel.contexts=false
+# Print out tracing info to the console when updating the ports cache.
+com.ibm.team.filesystem.rcp.core/trace.portscachemanager.update=false

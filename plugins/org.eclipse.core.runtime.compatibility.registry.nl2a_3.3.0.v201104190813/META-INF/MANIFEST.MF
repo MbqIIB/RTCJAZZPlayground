@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-Name: %nlFragmentName
+Bundle-SymbolicName: org.eclipse.core.runtime.compatibility.registry.nl2a ;singleton=true
+Bundle-Version: 3.3.0.v201104190813
+Bundle-ClassPath: nl2a.jar
+Bundle-Vendor: %nlProviderName
+Fragment-Host: org.eclipse.equinox.registry;bundle-version="[3.5.0,3.6.0)"
+Bundle-Localization: nl_fragment

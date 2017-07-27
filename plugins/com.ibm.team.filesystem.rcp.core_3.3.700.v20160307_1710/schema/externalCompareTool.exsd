@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Schema file written by PDE -->
+<schema targetNamespace="com.ibm.team.filesystem.rcp.core" xmlns="http://www.w3.org/2001/XMLSchema">
+<annotation>
+      <appInfo>
+         <meta.schema plugin="com.ibm.team.filesystem.rcp.core" id="externalCompareTool" name="%externalCompareToolName"/>
+      </appInfo>
+      <documentation>
+         This extension point can be used to provide a new external compare tool. ClearCase Diff Merge, Beyond Compare, DiffMerge, P4Merge and WinMerge are all examples of external compare tools which have been contributed this way.
+
+The external compare tool can further be customized using Eclipse preferences from the following page:
+Team --&gt; Jazz Source Control --&gt; External Compare Tools
+      </documentation>
+   </annotation>
+
+   <element name="extension">
+      <annotation>
+         <appInfo>
+            <meta.element />
+         </appInfo>
+      </annotation>
+      <complexType>
+         <sequence minOccurs="1" maxOccurs="unbounded">
+            <element ref="externalCompareTool" minOccurs="0" maxOccurs="unbounded"/>
+         </sequence>
+         <attribute name="point" type="string" use="required">
+            <annotation>
+               <documentation>
+                  a fully qualified identifier of the target extension point
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="id" type="string">
+            <annotation>
+               <documentation>
+                  an optional identifier of the extension instance
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="name" type="string">
+            <annotation>
+               <documentation>
+                  an optional name of the extension instance
+               </documentation>
+               <appInfo>
+                  <meta.attribute translatable="true"/>
+               </appInfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="externalCompareTool">
+      <complexType>
+         <attribute name="class" type="string" use="required">
+            <annotation>
+               <documentation>
+                  The class that defines the external compare tool implementation. This class must be a public subclass of &lt;code&gt;com.ibm.team.filesystem.rcp.core.compare.AbstractExternalCompareTool&lt;/code&gt; with a public 0-argument constructor.
+               </documentation>
+               <appInfo>
+                  <meta.attribute kind="java" basedOn="com.ibm.team.filesystem.rcp.core.compare.AbstractExternalCompareTool:"/>
+               </appInfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="since"/>
+      </appInfo>
+      <documentation>
+         0.9.0.2 (RTC 4.0.2)
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="examples"/>
+      </appInfo>
+      <documentation>
+         The following example shows a declaration of this extension:
+&lt;p&gt;
+&lt;pre&gt;
+   &lt;extension
+         point=&quot;com.ibm.team.filesystem.rcp.core.externalCompareTool&quot;&gt;
+      
+      &lt;externalCompareTool
+            class=&quot;com.ibm.team.filesystem.rcp.core.internal.compare.CompareToolBeyondCompare&quot;&gt;
+      &lt;/externalCompareTool&gt;
+
+   &lt;/extension&gt;
+&lt;/pre&gt;
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="apiinfo"/>
+      </appInfo>
+      <documentation>
+         [Enter API information here.]
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="implementation"/>
+      </appInfo>
+      <documentation>
+         [Enter information about supplied implementation of this extension point.]
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="copyright"/>
+      </appInfo>
+      <documentation>
+         Licensed Materials - Property of IBM
+(c) Copyright IBM Corporation 2012. All Rights Reserved. 
+
+Note to U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+      </documentation>
+   </annotation>
+
+</schema>

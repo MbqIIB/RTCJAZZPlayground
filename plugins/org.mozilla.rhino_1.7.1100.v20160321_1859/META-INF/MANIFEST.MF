@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ClassPath: lib/js.jar
+Bundle-Vendor: Eclipse.org
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-Name: Mozilla Rhino
+Bundle-SymbolicName: org.mozilla.rhino
+Bundle-Version: 1.7.1100.v20160321_1859
+Export-Package: org.mozilla.classfile,org.mozilla.javascript,org.mozil
+ la.javascript.continuations,org.mozilla.javascript.debug,org.mozilla.
+ javascript.optimizer,org.mozilla.javascript.regexp,org.mozilla.javasc
+ ript.serialize,org.mozilla.javascript.tools,org.mozilla.javascript.to
+ ols.shell
+Bundle-ManifestVersion: 2
+
+

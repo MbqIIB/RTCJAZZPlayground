@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<!--
+    Licensed Materials - Property of IBM
+    (c) Copyright IBM Corporation 2009, 2012. All Rights Reserved.
+    
+    Note to U.S. Government Users Restricted Rights:  
+    Use, duplication or disclosure restricted by GSA ADP Schedule 
+    Contract with IBM Corp. 
+ -->
+
+<plugin>
+   <extension-point
+         id="externalCompareTool"
+         name="%externalCompareToolsName"
+         schema="schema/externalCompareTool.exsd">
+   </extension-point>
+   <extension
+         point="org.eclipse.team.core.repository">
+      <repository
+            canImportId="com.ibm.team.filesystem.rcp.core.provider"
+            class="com.ibm.team.filesystem.rcp.core.internal.resources.ApoRepositoryProvider"
+            id="com.ibm.team.filesystem.rcp.core.provider"
+            typeClass="com.ibm.team.filesystem.rcp.core.internal.resources.ApoRepositoryProviderType"/>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.adapters">
+      <factory
+            adaptableType="org.eclipse.core.resources.IResource"
+            class="com.ibm.team.filesystem.rcp.core.internal.resources.ShareableAdapterFactory">
+         <adapter type="com.ibm.team.filesystem.client.IShareable"/>
+      </factory>
+   </extension>
+   <extension
+         point="com.ibm.team.filesystem.client.sharingManager">
+      <sharingManager class="com.ibm.team.filesystem.rcp.core.internal.resources.ResourceSharingManager"/>
+   </extension>
+   <extension
+         point="com.ibm.team.filesystem.client.storageManager">
+      <storageManager
+            class="com.ibm.team.filesystem.rcp.core.internal.resources.ResourceStorageManager"
+            storageId="com.ibm.team.filesystem.hfs"/>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="com.ibm.team.filesystem.rcp.core.internal.changes.PreferenceInitializer">
+      </initializer>
+   </extension>
+   <extension
+         point="com.ibm.team.filesystem.client.daemon.restservice">
+      <service
+            class="com.ibm.team.filesystem.rcp.core.internal.rest.FilesystemRestClient"
+            id="com.ibm.team.filesystem.client.rest.IFilesystemRestClient"
+            initializer="com.ibm.team.filesystem.rcp.core.internal.rest.FilesystemRestClientInitializer"
+            version="3.0.0">
+      </service>
+      <service
+            class="com.ibm.team.filesystem.rcp.core.internal.rest.DebugRestClient"
+            id="com.ibm.team.filesystem.client.rest.IDebugRestClient"
+            version="1.0.0">
+      </service>
+   </extension>
+   <extension
+         point="com.ibm.team.repository.rcp.core.persistable">
+      <persistableClass
+            class="com.ibm.team.filesystem.rcp.core.internal.patches.ApplyFileStateChangeOp"
+            id="com.ibm.team.filesystem.ui.patches.ApplyFileStateChangeOp">
+      </persistableClass>
+      <persistableClass
+            class="com.ibm.team.filesystem.rcp.core.internal.patches.ApplyLinkStateChangeOp"
+            id="com.ibm.team.filesystem.ui.patches.ApplyLinkStateChangeOp">
+      </persistableClass>
+      <persistableClass
+            class="com.ibm.team.filesystem.rcp.core.internal.patches.ApplyPropertyChangeOp"
+            id="com.ibm.team.filesystem.ui.patches.ApplyPropertyStateChangeOp">
+      </persistableClass>
+      <persistableClass
+            class="com.ibm.team.filesystem.rcp.core.internal.patches.PureStateChangeOp"
+            id="com.ibm.team.filesystem.ui.patches.PureLinkStateChangeOp">
+      </persistableClass>
+      <persistableClass
+            class="com.ibm.team.filesystem.rcp.core.internal.patches.PureFileStateChangeOp"
+            id="com.ibm.team.filesystem.ui.patches.PureStateChangeOp">
+      </persistableClass>
+      <persistableClass
+            class="com.ibm.team.filesystem.rcp.core.internal.patches.ClearFileContentsOp"
+            id="com.ibm.team.filesystem.ui.patches.ClearFileContentsOp">
+      </persistableClass>
+      <persistableClass
+            class="com.ibm.team.filesystem.rcp.core.internal.patches.CreateEmptyFileOp"
+            id="com.ibm.team.filesystem.ui.patches.CreateEmptyFileOp">
+      </persistableClass>
+      <persistableClass
+            class="com.ibm.team.filesystem.rcp.core.internal.patches.DeleteFolderOp"
+            id="com.ibm.team.filesystem.ui.patches.DeleteFolderOp">
+      </persistableClass>
+            <persistableClass
+            class="com.ibm.team.filesystem.rcp.core.internal.patches.DeleteLinkOp"
+            id="com.ibm.team.filesystem.ui.patches.DeleteLinkOp">
+      </persistableClass>
+      <persistableClass
+            class="com.ibm.team.filesystem.rcp.core.internal.patches.ApplyHunkOp"
+            id="com.ibm.team.filesystem.ui.patches.ApplyHunkOp">
+      </persistableClass>
+      <persistableClass
+            class="com.ibm.team.filesystem.rcp.core.internal.patches.CreateFolderOp"
+            id="com.ibm.team.filesystem.ui.patches.CreateFolderOp">
+      </persistableClass>
+      <persistableClass
+            class="com.ibm.team.filesystem.rcp.core.internal.patches.MoveFileOp"
+            id="com.ibm.team.filesystem.ui.patches.MoveFileOp">
+      </persistableClass>
+      <persistableClass
+            class="com.ibm.team.filesystem.rcp.core.internal.patches.PatchResult"
+            id="com.ibm.team.filesystem.rcp.core.internal.patches.PatchResult">
+      </persistableClass>
+   </extension>
+   <extension
+         point="com.ibm.team.filesystem.client.ignoreProvider">
+      <provider
+            class="com.ibm.team.filesystem.rcp.core.internal.resources.LinkedResourceIgnoreProvider"
+            name="linkResourceIgnores">
+      </provider>
+   </extension>
+   <extension
+         point="com.ibm.team.filesystem.rcp.core.externalCompareTool">
+      <externalCompareTool
+            class="com.ibm.team.filesystem.rcp.core.internal.compare.CompareToolCustom">
+      </externalCompareTool>
+      <externalCompareTool
+            class="com.ibm.team.filesystem.rcp.core.internal.compare.CompareToolBeyondCompare">
+      </externalCompareTool>
+      <externalCompareTool
+            class="com.ibm.team.filesystem.rcp.core.internal.compare.CompareToolClearCaseDiffMerge">
+      </externalCompareTool>
+      <externalCompareTool
+            class="com.ibm.team.filesystem.rcp.core.internal.compare.CompareToolDiffMerge">
+      </externalCompareTool>
+      <externalCompareTool
+            class="com.ibm.team.filesystem.rcp.core.internal.compare.CompareToolKDiff3">
+      </externalCompareTool>
+      <externalCompareTool
+            class="com.ibm.team.filesystem.rcp.core.internal.compare.CompareToolP4Merge">
+      </externalCompareTool>
+      <externalCompareTool
+            class="com.ibm.team.filesystem.rcp.core.internal.compare.CompareToolWinMerge">
+      </externalCompareTool>
+   </extension>
+
+</plugin>

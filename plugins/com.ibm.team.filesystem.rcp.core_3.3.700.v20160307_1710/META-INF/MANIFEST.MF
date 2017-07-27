@@ -1,0 +1,45 @@
+Manifest-Version: 1.0
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-SymbolicName: com.ibm.team.filesystem.rcp.core;singleton:=true
+Eclipse-LazyStart: true
+Require-Bundle: org.eclipse.core.runtime,org.eclipse.core.resources,or
+ g.eclipse.team.core,com.ibm.team.filesystem.common,com.ibm.team.repos
+ itory.common,com.ibm.team.repository.common.json,com.ibm.team.scm.com
+ mon,com.ibm.team.repository.client,com.ibm.team.scm.client,com.ibm.te
+ am.filesystem.client,com.ibm.team.repository.rcp.core,com.ibm.team.pr
+ ocess.common,com.ibm.team.foundation.rcp.core,org.eclipse.core.databi
+ nding,com.ibm.team.foundation.common,com.ibm.team.filesystem.client.d
+ aemon,com.ibm.team.repository.rcp.common,org.eclipse.compare.core;res
+ olution:=optional,org.apache.http
+Bundle-Activator: com.ibm.team.filesystem.rcp.core.internal.FileSystem
+ ResourcesPlugin
+Bundle-Version: 3.3.700.v20160307_1710
+Export-Package: com.ibm.team.filesystem.rcp.core.internal,com.ibm.team
+ .filesystem.rcp.core.internal.changelog,com.ibm.team.filesystem.rcp.c
+ ore.internal.changes,com.ibm.team.filesystem.rcp.core.internal.change
+ s.locks,com.ibm.team.filesystem.rcp.core.internal.changes.model,com.i
+ bm.team.filesystem.rcp.core.internal.changes.outofsync,com.ibm.team.f
+ ilesystem.rcp.core.internal.changes.ports,com.ibm.team.filesystem.rcp
+ .core.internal.changes.ports.model,com.ibm.team.filesystem.rcp.core.i
+ nternal.changes.update,com.ibm.team.filesystem.rcp.core.internal.chan
+ ges.util,com.ibm.team.filesystem.rcp.core.internal.changes.util.liste
+ ners,com.ibm.team.filesystem.rcp.core.internal.changes.util.mutator,c
+ om.ibm.team.filesystem.rcp.core.internal.compare,com.ibm.team.filesys
+ tem.rcp.core.internal.operations,com.ibm.team.filesystem.rcp.core.int
+ ernal.operations.merge,com.ibm.team.filesystem.rcp.core.internal.oslc
+ ,com.ibm.team.filesystem.rcp.core.internal.patches,com.ibm.team.files
+ ystem.rcp.core.internal.resources;x-friends:="com.ibm.team.filesystem
+ .client.tests,com.ibm.team.filesystem.tools,com.ibm.team.filesystem.c
+ li.client",com.ibm.team.filesystem.rcp.core.internal.rest; x-friends:
+ ="com.ibm.team.filesystem.client.tests,  com.ibm.team.filesystem.clie
+ nt.daemon,  com.ibm.team.filesystem.cli.client,  com.ibm.team.filesys
+ tem.cli.client.ui",com.ibm.team.filesystem.rcp.core.internal.rest.uti
+ l,com.ibm.team.filesystem.rcp.core.internal.streams,com.ibm.team.file
+ system.rcp.core.operations,com.ibm.team.filesystem.rcp.core.patches
+Bundle-ClassPath: com.ibm.team.filesystem.rcp.core.jar
+Bundle-Vendor: %bundleVendor
+Bundle-Name: %bundleName
+Bundle-ManifestVersion: 2
+
+

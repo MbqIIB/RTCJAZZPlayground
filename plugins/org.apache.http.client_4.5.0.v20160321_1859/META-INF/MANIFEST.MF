@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Bundle-ClassPath: lib/commons-codec-1.9.jar,lib/fluent-hc-4.5.jar,lib/
+ httpclient-4.5.jar,lib/httpclient-cache-4.5.jar,lib/httpmime-4.5.jar,
+ lib/httpclient-win-4.5.jar,lib/jna-4.1.0.jar,lib/jna-platform-4.1.0.j
+ ar
+Bundle-Vendor: The Apache Software Foundation
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-Name: Apache HttpComponents HttpClient
+Bundle-SymbolicName: org.apache.http.client
+Require-Bundle: org.apache.http,org.apache.commons.logging
+Export-Package: com.sun.jna.platform.win32,org.apache.http.auth,org.ap
+ ache.http.auth.params,org.apache.http.client,org.apache.http.client.c
+ ache,org.apache.http.client.config,org.apache.http.client.entity,org.
+ apache.http.client.fluent,org.apache.http.client.methods,org.apache.h
+ ttp.client.params,org.apache.http.client.protocol,org.apache.http.cli
+ ent.utils,org.apache.http.conn,org.apache.http.conn.params,org.apache
+ .http.conn.routing,org.apache.http.conn.scheme,org.apache.http.conn.s
+ ocket,org.apache.http.conn.ssl,org.apache.http.conn.util,org.apache.h
+ ttp.cookie,org.apache.http.cookie.params,org.apache.http.entity.mime,
+ org.apache.http.entity.mime.content,org.apache.http.impl.auth,org.apa
+ che.http.impl.auth.win,org.apache.http.impl.client,org.apache.http.im
+ pl.client.cache,org.apache.http.impl.client.cache.ehcache,org.apache.
+ http.impl.client.cache.memcached,org.apache.http.impl.conn,org.apache
+ .http.impl.conn.tsccm,org.apache.http.impl.cookie,org.apache.http.imp
+ l.execchain
+Bundle-Version: 4.5.0.v20160321_1859
+Bundle-ManifestVersion: 2
+
+
