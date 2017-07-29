@@ -120,7 +120,8 @@ public class Snippet1 {
 		{
 
 			result = service.getBlame(parms);
-			result = service.getChangeSet(paramParmsGetChangeSet)(parms);
+			 ChangeSetSyncDTO[] csDTOList = RepoUtil.findChangeSets(csSelectors, false, null, null, repo.getRepositoryURI(), 
+				      client, config);
 			System.out.println(result.length);
 			System.out.println(java.util.Arrays.toString(result));
 		} catch (TeamRepositoryException e) {
@@ -130,5 +131,6 @@ public class Snippet1 {
 
 		return result;
 	}
+	
 
 }
