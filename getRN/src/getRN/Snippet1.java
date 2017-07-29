@@ -120,6 +120,7 @@ public class Snippet1 {
 		{
 
 			result = service.getBlame(parms);
+			ICommandLine subargs = config.getSubcommandCommandLine();
 			 ChangeSetSyncDTO[] csDTOList = RepoUtil.findChangeSets(csSelectors, false, null, null, repo.getRepositoryURI(), 
 				      client, config);
 			System.out.println(result.length);
